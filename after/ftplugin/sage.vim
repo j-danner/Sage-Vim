@@ -1,6 +1,7 @@
 " Folding for Python files
-" Last Change: 2010 December 11
-" Author: Franco Saliola
+" Last Change: 2020 April 1
+" Original Author: Franco Saliola
+" Author: Julian Danner
 "
 " Heavily modified version of Jurjen Bos's script:
 "     http://www.vim.org/scripts/script.php?script_id=2527
@@ -163,3 +164,10 @@ function! GetPythonFold(lnum)
     return foldlevel
 
 endfunction
+
+
+
+if exists('g:repl')
+    let sage_repl = {'bin': 'sage', 'args': [], 'syntax': 'sage', 'title': 'Sage REPL'}
+    call repl#define_repl('sage', sage_repl, 'force')
+endif

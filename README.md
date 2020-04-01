@@ -1,23 +1,12 @@
-### A vim plugin for working with SageMath (sagemath.org)
+### Vim plugin for working with SageMath
 
-> Warning: some features of this plugin depend on
-> [tmux](https://tmux.github.io/) and Tim Pope's
-> [vim-tbone](https://github.com/tpope/vim-tbone)
-> plugin, namely the commands that send text to tmux panes.
+> Note: this Plugin is based on the one by [saliola](https://github.com/saliola/sage-vim) and is only differing to the extent of not depending on [tmux](https://tmux.github.io/) and [vim-tbone](https://github.com/tpope/vim-tbone). Instead it relies offers a REPL interface using [repl.nvim](https://gitlab.com/HiPhish/repl.nvim).
+
 
 Syntax highlighting:
-
 - Uses the default syntax highlighting for python files, except that the
   docstrings use some RST highlighting
 - This is done by creating a syntax file in after
 
 Folding:
-
 - modified the standard python folding to fold documentation strings
-
-TODO:
-
-- use vim's make to launch doctests and open errors in a quickfix window (FIXME)
-- move file type detection to here from .vimrc
-- move syntax file from under after; it should just load the python syntax
-- improve support for working with the compiler
