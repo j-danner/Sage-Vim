@@ -92,12 +92,6 @@ syntax region pythonDocString
     \ fold
 hi link pythonDocString PyDocString
 
-" clear the pythonDoctest and pythonDoctestValue syntax groups
-if hlexists("pythonDoctest")
-    syntax clear pythonDoctest
-    syntax clear pythonDoctestValue
-endif
-
 syntax region sageDoctest
     \ start=+^\s*sage:\s+
     \ end=+\%(^\s*$\|^\s*"""$\)+
